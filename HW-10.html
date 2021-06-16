@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script>
+       function cal(){
+           height=document.getElementById("height").value;
+           weight=document.getElementById("weight").value;
+           BMI=weight/[(height/100)*(height/100)];
+           document.getElementById("BMI").value=BMI;
+       }
+</script>
+
+
+    <meta charset="UTF-8" name="viewport"content="width=device-width,initial-scale=1">
+    <title>BMI測試</title>
+       
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">第一種BMI作法</h5>
+                <p class="card-text">
+                    <form
+                    oninput="result.value=parselnt(a.value)+parselnt(b.value)">
+                    <input type="range" id="b" name="b" value="50"/>+
+                    <input type="number" id="a" name="a" value="10"/>=
+                    <output name="result" for="a b">60</output>
+                </form>      
+                </p>
+            </div>
+        </div>        
+
+        <div class="col-sm-6">
+
+          <div class="card text-white  bg-primary border-secondary">
+            <div class="card-body">
+            <h5 class="card-title">第二種BMI作法</h5>
+            <p class="card-text">
+               <p>身高 : <input type="number" id="height">cm</p>
+               <p>體重 : <input type="number" id="weight">kg</p>
+               <p><button type="button" class="btn btn-warning" onclick="cal()">計算</button></p>
+               <p>BMI :<input type="text" id="BMI"></p>
+            </p>
+            </div>
+          </div>  
+        </div>
+    
+</html>        
